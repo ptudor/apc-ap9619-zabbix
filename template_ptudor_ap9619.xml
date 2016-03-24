@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2016-02-29T06:07:09Z</date>
+    <groups>
+        <group>
+            <name>APC UPS</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Patrick Tudor AP9619</template>
+            <name>Template Patrick Tudor AP9619</name>
+            <description>Temp and Humidity from the APC AP9619 (and maybe 9612) network management card environmental sensor.</description>
+            <groups>
+                <group>
+                    <name>APC UPS</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>APC Temp and Humidity</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>AP9619 Humidity</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.318.1.1.10.2.3.2.1.6.1</snmp_oid>
+                    <key>net.ptudor.apc.ap9619.humidity</key>
+                    <delay>120</delay>
+                    <history>60</history>
+                    <trends>1096</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>%</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>AP9619 Humidity with classic SNMP</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>APC Temp and Humidity</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>AP9619 Temperature °C</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>.1.3.6.1.4.1.318.1.1.10.2.3.2.1.4.1</snmp_oid>
+                    <key>net.ptudor.apc.ap9619.temperature.c</key>
+                    <delay>120</delay>
+                    <history>60</history>
+                    <trends>1096</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>°C</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>AP9619 Temperature with classic SNMP</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>APC Temp and Humidity</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>AP9619 Temperature °F</name>
+                    <type>15</type>
+                    <snmp_community/>
+                    <multiplier>0</multiplier>
+                    <snmp_oid/>
+                    <key>net.ptudor.apc.ap9619.temperature.f</key>
+                    <delay>30</delay>
+                    <history>15</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units>°F</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params>9/5*(last(&quot;net.ptudor.apc.ap9619.temperature.c&quot;))+32</params>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>APC Temp and Humidity</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules/>
+            <macros/>
+            <templates/>
+            <screens>
+                <screen>
+                    <name>AP9619 Screen</name>
+                    <hsize>1</hsize>
+                    <vsize>3</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>750</width>
+                            <height>125</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>AP9619 Temperature °C</name>
+                                <host>Template Patrick Tudor AP9619</host>
+                            </resource>
+                            <max_columns>3</max_columns>
+                            <application/>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>750</width>
+                            <height>125</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>AP9619 Humidity</name>
+                                <host>Template Patrick Tudor AP9619</host>
+                            </resource>
+                            <max_columns>3</max_columns>
+                            <application/>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <width>750</width>
+                            <height>125</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <style>0</style>
+                            <url/>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <resource>
+                                <name>AP9619 Temperature and Humidity</name>
+                                <host>Template Patrick Tudor AP9619</host>
+                            </resource>
+                            <max_columns>3</max_columns>
+                            <application/>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.humidity.avg(10m)}&lt;10 or {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.humidity.avg(10m)}&gt;65</expression>
+            <name>AP9619 {HOST.NAME} Humidity Abnormal</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>Humidity over 65% or under 10%</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.humidity.last()}&gt;85 and {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.c.last()}&gt;0 and {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.f.last()}&gt;0</expression>
+            <name>AP9619 {HOST.NAME} Humidity Emergency</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description>Humidity exceeds a maximum value and generates a disaster alert.</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.c.avg(10m)}&lt;20 or {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.c.avg(10m)}&gt;32</expression>
+            <name>AP9619 {HOST.NAME} Temperature Abnormal</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>Temperature is too cold or too hot.</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.c.last()}&gt;42 and {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.temperature.f.last()}&gt;0 and {Template Patrick Tudor AP9619:net.ptudor.apc.ap9619.humidity.last()}&gt;0</expression>
+            <name>AP9619 {HOST.NAME} Temperature Emergency</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description>Temperature exceeds a maximum value and generates a disaster alert.</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>AP9619 Humidity</name>
+            <width>800</width>
+            <height>400</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>1</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>3333FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.humidity</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>AP9619 Temperature and Humidity</name>
+            <width>800</width>
+            <height>400</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>0</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>1</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>2</drawtype>
+                    <color>3333FF</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.humidity</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>2</sortorder>
+                    <drawtype>1</drawtype>
+                    <color>00AA00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.temperature.c</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>EEEE00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.temperature.f</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>AP9619 Temperature °C</name>
+            <width>800</width>
+            <height>400</height>
+            <yaxismin>15.0000</yaxismin>
+            <yaxismax>45.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>1</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>00AA00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.temperature.c</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>AP9619 Temperature °F</name>
+            <width>800</width>
+            <height>400</height>
+            <yaxismin>50.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>1</ymin_type_1>
+            <ymax_type_1>1</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>5</drawtype>
+                    <color>EEEE00</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Template Patrick Tudor AP9619</host>
+                        <key>net.ptudor.apc.ap9619.temperature.f</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
